@@ -1,0 +1,9 @@
+<% @posts.each do |p| %>
+  <%= p.title %>
+  <% p.images.each do |image| %>
+    <%= image_tag(image.url, size: "50x50") %>
+  <% end %>
+  <%= image_tag(p.images[0].url, size: "200x200") %>
+<% end %>
+
+<%= link_to "トップページへ",root_path %>
